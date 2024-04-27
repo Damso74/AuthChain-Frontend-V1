@@ -76,7 +76,7 @@ The dApp architecture comprises three main components:
 
 A working prototype of the AuthChain dApp is available for review. The complete source code is hosted on GitHub, which you can access, fork, and review.
 
-**Repository Link**: [AuthChain Frontend GitHub](https://github.com/Damso74/AuthChain-frontend)
+**Repository Link**: [AuthChain Frontend GitHub](https://github.com/Damso74/AuthChain-frontend-v1)
 
 ### Documentation
 
