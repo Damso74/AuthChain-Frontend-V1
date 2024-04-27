@@ -1,12 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import lottie from 'lottie-web';
+import lottie, { AnimationItem } from 'lottie-web'; // Import the type AnimationItem
 import BenefitsSection from './BenefitsSection';
 import About from '../About/About';
 
 import './Home.css'; 
 
-// Assurez-vous que cette importation est correcte et que la fonction est bien exportée depuis son module
 import { initHeroAnimation } from './heroAnimation'; 
 
 const Home: React.FC = () => {
@@ -16,7 +15,9 @@ const Home: React.FC = () => {
   useEffect(() => {
     initHeroAnimation('hero-canvas');  // Initialisation des particules
 
-    let anim = null;
+    // Declare anim with the correct type
+    let anim: AnimationItem | null = null;
+
     if (animationContainer.current) {
       anim = lottie.loadAnimation({
         container: animationContainer.current, // L'élément DOM pour l'animation
@@ -24,10 +25,14 @@ const Home: React.FC = () => {
         loop: true,
         autoplay: true,
         path: 'src/animation/animation-home.json' // Chemin correct vers le fichier d'animation
-      });
+      }) as AnimationItem; // Use type assertion here if needed
     }
+
+    // Return a cleanup function
     return () => {
-      anim?.destroy(); // Nettoyage de l'animation Lottie
+      if (anim) {
+        anim.destroy(); // Nettoyage de l'animation Lottie
+      }
     };
   }, []);
 
@@ -43,7 +48,6 @@ const Home: React.FC = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
   return (
     <div className="home">
       {/* Hero Section with Lottie Animation */}
