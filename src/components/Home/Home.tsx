@@ -24,7 +24,7 @@ const Home: React.FC = () => {
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: 'src/animation/animation-home.json' // Chemin correct vers le fichier d'animation
+        path: 'public/animation/animation-home.json' // Chemin correct vers le fichier d'animation
       }) as AnimationItem; // Use type assertion here if needed
     }
 
