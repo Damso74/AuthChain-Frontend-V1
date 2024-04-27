@@ -11,7 +11,7 @@ function Footer() {
           <a href="/contact">Contact</a>
         </section>
         <section className="footer-open-source">
-          <p>This project is open source. Contribute on <a href="https://github.com/authchain">GitHub</a>.</p>
+          <p>This project is open source. Contribute on <a href="https://github.com/Damso74/AuthChain-Frontend-V1.git">GitHub</a>.</p>
         </section>
       </div>
     </footer>
