@@ -1,1 +1,0 @@
-import{j as o}from"./index-0cd8c9ef.js";function r(){return o.jsxs("div",{className:"NotFound",children:[o.jsx("h1",{children:"404 - Page Not Found"}),o.jsx("p",{children:"We're sorry, but the page you are looking for does not exist or has been moved."}),o.jsx("a",{href:"/",children:"Return to Home"})]})}export{r as default};

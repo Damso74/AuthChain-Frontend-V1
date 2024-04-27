@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Lottie from 'react-lottie';
-import animationData from '../animation/animation-blockchain.json';
+import animationData from './animation-blockchain.json';
 
 const AnimationBlockchain: React.FC = () => {
   const defaultOptions = {
