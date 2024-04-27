@@ -1,0 +1,35 @@
+{
+  "description": "This dataset includes encrypted email addresses for secure authentication within the AuthChain application. It utilizes advanced encryption methods to ensure data privacy and integrity, making it suitable for decentralized authentication without compromising user privacy.",
+  "license": "MIT",
+  "author": "Reblochon",
+  "social": {
+    "website": "https://authchain.example.com",
+    "github": "https://github.com/Damso74/authchain-frontend"
+  },
+  "logo": "LogoAuthChain.png",
+  "dataset": {
+    "owner": "0x91Df5d9D5e48af5b3c59Bf6F9CF48BB2e903a9ff",
+    "name": "my-dataset",
+    "multiaddr": "/ipfs/QmW2WQi7j6c7UgJTarActp7tDNikE4B2qXtFCfLPdsgaTQ",
+    "checksum": "0xbbdce3bedf5e66c62c4fd76d3178c9f0146c772e9ef8fbf9af7ad6c172dc1719"
+  },
+  "order": {
+    "datasetorder": {
+      "dataset": "0x095c6B9475447DE99aE431aDf9A3A233D0b58C50",
+      "datasetprice": "0",
+      "volume": "1000000",
+      "tag": [],
+      "apprestrict": "0x0000000000000000000000000000000000000000",
+      "workerpoolrestrict": "0x0000000000000000000000000000000000000000",
+      "requesterrestrict": "0x0000000000000000000000000000000000000000"
+    }
+  },
+  "buyConf": {},
+  "app": {
+    "owner": "0x91Df5d9D5e48af5b3c59Bf6F9CF48BB2e903a9ff",
+    "name": "hello-world",
+    "type": "DOCKER",
+    "multiaddr": "iexechub/python-hello-world:7.0.5",
+    "checksum": "0xaea3f77f09567fa0da20b86d9b7dac3ef958b7d4751a37cfa7cd7851f57ac191"
+  }
+}

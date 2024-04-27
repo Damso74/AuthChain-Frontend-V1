@@ -1,0 +1,77 @@
+.iExecPresentation {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    display: grid;
+    gap: 30px;
+    align-items: start;
+    position: relative; /* Ensure relative positioning for absolute children */
+}
+
+.logo {
+    position: absolute; /* Absolute positioning for the logo */
+    top: 40px; /* Distance from the top */
+    left: 60px; /* Distance from the left */
+    width: 150px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.title {
+    color: #333;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px; /* Moins d'espace sous le titre pour coller au trait */
+    position: relative; /* Pour le pseudo-élément after */
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Juste en dessous du titre */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%; /* Pourcentage de la largeur du titre */
+    height: 4px;
+    background-color: #ffd700; /* Trait jaune */
+    border-radius: 2px;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff; /* Conteneurs blancs pour chaque élément de liste */
+    padding: 15px;
+    border-radius: 8px; /* Coins arrondis */
+    margin-bottom: 20px; /* Espace entre les éléments de liste */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Petite ombre pour la profondeur */
+}
+
+.animation {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    background-color: #ffffff; /* Background blanc pour l'animation */
+    border-radius: 50%; /* Forme circulaire pour le conteneur d'animation */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre pour le conteneur d'animation */
+}
+
+.description {
+    text-align: center;
+    color: #555;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+/* Adaptation pour les petits écrans */
+@media (max-width: 768px) {
+    .listItem {
+        flex-direction: column; /* Éléments de liste en colonne sur petits écrans */
+    }
+
+    .animation {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

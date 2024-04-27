@@ -1,0 +1,89 @@
+/* src/App.css */
+
+/* Root definitions for consistent theming and easy adjustments */
+
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Headers and Footers */
+header, footer {
+  padding: 1rem;
+  background-color: var(--bg-color);
+  text-align: center;
+  border-bottom: 1px solid var(--text-secondary);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Main content area */
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Links */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--link-hover);
+}
+
+/* Button styling */
+button {
+  background-color: var(--primary-color);
+  color: var(--text-primary);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Loading spinner styles */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(0,0,0,.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Error message styling */
+.error {
+  color: var(--error-color);
+  margin: 10px 0;
+}

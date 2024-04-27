@@ -1,0 +1,257 @@
+/* Dashboard.module.css */
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background: linear-gradient(to bottom, #f9f9f9, #ffffff); /* Light gradient background */
+}
+
+.welcomeSection,
+.overview,
+.dataVisualization,
+.notifications,
+.settingsShortcut,
+.supportAccess {
+  background-color: #ffffff; /* White background for card-like sections */
+  border-radius: 10px; /* Rounded corners for a smooth look */
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.welcomeSection:hover,
+.overview:hover,
+.notifications:hover,
+
+/* Notifications.module.css */
+
+.notifications {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+
+.notificationsTitle {
+  color: #333;
+  font-size: 2rem;
+  position: relative; /* Required for positioning the pseudo-element */
+  display: inline-block; /* Ensures the underline only takes up the width of the text */
+}
+
+.notificationsTitle::after {
+  content: '';
+  display: block;
+  width: 100%; /* Full width of the title */
+  height: 3px; /* Thickness of the underline */
+  background-color: #ffd700; /* Bright yellow color */
+  position: absolute;
+  bottom: -10px; /* Distance from the bottom of the title */
+  left: 0;
+}
+
+
+.notificationsList {
+  overflow: auto;
+  max-height: 300px; /* Adjust height as needed */
+}
+
+.notificationItem {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.notificationItem:last-child {
+  border-bottom: none;
+}
+
+.notificationIcon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.notificationMessage {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+.notificationItem:hover {
+  background-color: #f8f8f8;
+}
+
+.settingsShortcut:hover,
+.supportAccess:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow for hover effect */
+}
+
+.title {
+  color: #333; /* Dark grey text for titles */
+  padding: 5px 0; /* Spacing for the title */
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 50%;
+  height: 4px;
+  background-color: #ffd700; /* Yellow underline */
+  border-radius: 2px;
+}
+
+
+.actionLink,
+.actionButton {
+  margin-top: 10px;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff; /* White text for buttons */
+  background-color: #ffd700; /* Bright yellow for buttons */
+  padding: 12px 18px;
+  border-radius: 10px; /* Rounded corners for buttons */
+  border: none; /* No border by default */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.actionButton {
+  background-color: #ffd700; /* Consistent with .actionLink */
+}
+
+.actionLink:hover,
+.actionButton:hover {
+  background-color: #cca700; /* Darker yellow on hover */
+  color: #ffffff; /* Ensuring text remains white on hover */
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 10px;
+  }
+
+  .welcomeSection,
+  .overview,
+  .dataVisualization,
+  .notifications,
+  .settingsShortcut,
+  .supportAccess {
+    padding: 10px;
+    box-shadow: none; /* Remove shadow on smaller screens */
+  }
+
+  .title {
+    font-size: 18px; /* Adjusting title size for smaller screens */
+  }
+
+  .actionLink,
+  .actionButton {
+    padding: 8px 14px; /* Smaller padding for smaller buttons */
+  }
+}
+
+.settingsShortcut {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.settingsShortcut:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.settingsTitle {
+  color: #333;
+  font-size: 1.8rem; /* Slightly larger font size for aesthetics */
+  margin-bottom: 0.5em;
+  position: relative;
+}
+
+.settingsTitle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjusted to ensure it is right below the text */
+  width: 60%; /* Adjusted for design preference */
+  height: 3px;
+  background-color: #ffd700;
+  border-radius: 2px;
+}
+
+.settingsList {
+  margin-bottom: 20px;
+}
+
+.settingItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; /* Increased for better spacing */
+}
+
+.settingIcon {
+  font-size: 1.5rem; /* Smaller icons for aesthetics */
+  margin-right: 15px; /* Adjusted spacing */
+}
+
+.settingDetails {
+  flex-grow: 1;
+}
+
+.settingName {
+  color: #333;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.settingDescription {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+.settingsActions {
+  text-align: center;
+  margin-top: 15px; /* Added space before the button */
+}
+
+.settingsButton {
+  background-color: #ffd700;
+  color: #333;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.settingsButton:hover {
+  background-color: #cca700;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .settingItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .settingIcon {
+    margin-bottom: 10px; /* Added space between icon and text for mobile */
+  }
+
+  .settingsButton {
+    width: 100%;
+  }
+}

@@ -1,0 +1,87 @@
+/* Layout configurations */
+.dashboardContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f9f9f9; /* Slightly off-white background for the dashboard */
+}
+
+/* Chart container styling for a cleaner look */
+.chartContainer,
+.pieChartContainer {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+}
+
+/* Full width on small screens and flexibility in layout */
+.chartContainer {
+  flex: 2; /* Takes twice the space of pieChartContainer */
+  margin-right: 20px; /* Ensures spacing between the charts */
+}
+
+/* Align pie chart container and legend */
+.pieChartContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the pie chart */
+}
+
+/* Tooltips and legends styling for better appearance */
+.tooltipCustom,
+.legendStyle {
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+/* Ensuring the legend is correctly positioned and doesn't overlap */
+.legendStyle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Adjusts the position relative to its normal position */
+  margin-top: 20px; /* Additional spacing from the top of the pie chart */
+  width: 100%; /* Utilizes the full width of its container */
+}
+
+/* Legend item styles */
+.legendItem {
+  display: flex;
+  align-items: center;
+}
+
+.legendColorBox {
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+}
+
+.legendText {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive design for better mobile experience */
+@media (max-width: 768px) {
+  .dashboardContainer {
+    flex-direction: column;
+  }
+
+  .chartContainer,
+  .pieChartContainer {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  /* Position the legend below the pie chart on small screens */
+  .legendStyle {
+    order: 2; /* Positions the legend after the pie chart */
+    margin-top: 10px;
+  }
+}

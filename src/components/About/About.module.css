@@ -1,0 +1,105 @@
+/* About.module.css */
+
+.aboutContainer {
+  max-width: 1200px; /* Increased max width */
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff; /* Clean white background for the outer container */
+  overflow: hidden;
+  color: #333; /* Ensuring text is readable */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+  grid-template-rows: auto auto auto; /* Three rows, with the last row spanning full width for CTA */
+  grid-gap: 20px; /* Space between sections */
+}
+
+.animationContainer {
+  height: 250px;
+  margin-top: 20px;
+  background: #f9f9f9; /* Subtle different background for animations */
+  border-radius: 10px;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.title, .subtitle {
+  color: #514506; /* Bright yellow for titles */
+  text-align: center;
+  position: relative;
+  padding-bottom: 5px; /* Space below the title for the underline */
+}
+
+.title::after, .subtitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 40%;
+  height: 3px;
+  background-color: #ffd700; /* Underline color */
+  transform: translateX(-50%);
+  border-radius: 1px;
+}
+
+.section {
+  background-color: #f7f7f7; /* Light gray background for each section */
+  padding: 30px; /* Ample padding for breathing space */
+  border-radius: 8px; /* Slightly rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+.paragraph {
+  text-align: justify;
+  line-height: 1.8;
+  color: #666; /* Lighter text for easier readability */
+  font-size: 1.1rem;
+}
+
+.highlight {
+  text-align: center;
+  color: #333; /* Dark text for contrast on light background */
+  font-weight: bold;
+  padding: 20px; /* Increased padding for more space */
+  background-color: rgba(255, 215, 0, 0.3); /* More vibrant yellow background */
+  border-radius: 5px;
+  margin: 70px auto; /* Centering in the section */
+  width: 80%; /* Utilizing more space */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: flex; /* Flexbox for internal layout */
+  justify-content: space-around; /* Space around items */
+  flex-wrap: wrap; /* Allow wrapping */
+  font-size: 1.25rem; /* Increased font size */
+}
+
+.ctaButton {
+  font-size: 1em;
+  font-family: 'Arial Narrow Bold', sans-serif;
+  padding: 15px 30px;
+  background-color: #fcd15a; /* Direct color for better contrast */
+  color: #121212;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Direct shadow for better control */
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 4em;
+  text-decoration: none; /* Remove underline from text */
+  display: inline-block; /* Align properly with margin auto */
+  margin: auto;
+}
+
+.ctaButton:hover {
+  background-color: #e6b800; /* Darker yellow for contrast */
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-decoration: none; /* Remove text underline on hover */
+}
+.ctaButton:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .aboutContainer {
+    grid-template-columns: 1fr; /* Single column layout on small screens */
+  }
+}

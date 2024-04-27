@@ -1,0 +1,51 @@
+.businessBenefits {
+    padding: 30px; /* Increase padding for a more spacious feel */
+    margin: 30px 0; /* Increase margin for better separation from other elements */
+    background-color: #ffffff; /* White background for a cleaner look */
+    border-radius: 15px; /* More pronounced rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Deeper shadow for more depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.businessBenefits h2 {
+    color: #333; /* Dark grey for more contrast against the white background */
+    margin-bottom: 25px; /* Increased space below the header */
+    padding-bottom: 10px; /* Increased padding for visual comfort */
+    border-bottom: 5px solid #ffd700; /* Yellow underline for the title */
+    width: 30%;
+
+}
+
+.businessBenefits ul {
+    margin-top: 20px; /* Increase space above the list */
+}
+
+.businessBenefits li {
+    margin-bottom: 15px; /* Increase space between list items */
+    padding: 10px 20px; /* Padding inside each list item for a "card-like" appearance */
+    background-color: #f9f9f9; /* Slight grey background for each list item */
+    border-left: none; /* Removing the left border */
+    border-radius: 8px; /* Slight rounding on list item corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.businessBenefits li:hover {
+    background-color: #fffde7; /* Light yellow background on hover for interactivity */
+}
+
+.businessBenefits li strong {
+    color: #333; /* Dark grey for emphasis */
+    font-weight: bold; /* Bold for emphasis */
+}
+
+.businessBenefits li::before {
+    content: ''; /* Pseudo-element for custom bullets */
+    position: absolute; /* Absolute positioning relative to the parent li */
+    left: -10px; /* Move out of the list */
+    top: 5px; /* Center vertically in the text line */
+    height: 8px; /* Height of the bullet */
+    width: 8px; /* Width of the bullet */
+    background-color: #ffd700; /* Yellow to match the section theme */
+    border-radius: 50%; /* Round shape */
+    box-shadow: 0 0 8px #ffd700; /* Soft glow for attention */
+}

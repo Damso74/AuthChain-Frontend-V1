@@ -1,0 +1,49 @@
+/* NotFound.css */
+
+.NotFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh; /* Adjust based on your header and footer */
+  text-align: center;
+}
+
+.NotFound h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  position: relative; /* Needed for the pseudo-element */
+}
+
+.NotFound h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px; /* Position below the title */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%; /* Width of the underline */
+  height: 3px; /* Height of the underline */
+  background-color: #ffd700; /* Bright yellow for the underline */
+  border-radius: 1px;
+}
+
+.NotFound p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #666; /* Lighter grey for the paragraph text */
+}
+
+.NotFound a {
+  display: inline-block;
+  background-color: #ffd700; /* Vibrant blue for the link button */
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.NotFound a:hover {
+  background-color: #ffd700; /* Bright yellow for the underline */
+  ; /* Dark blue for link hover effects */
+}

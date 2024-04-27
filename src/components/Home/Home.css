@@ -1,0 +1,119 @@
+/* Home.css */
+
+.home {
+  font-family: 'Helvetica', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  text-align: center;
+  padding: 12rem 1rem 4rem;
+  overflow: hidden;
+  min-height: 290px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 60%;
+  margin-top: -200px;
+  margin-left: 30px;
+  color: #000;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  position: relative; /* For pseudo-element */
+}
+
+/* Yellow underline for title */
+.hero-content h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px; /* Position under the title */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 4px;
+  background-color: #ffd700; /* Bright yellow */
+  border-radius: 2px;
+}
+
+.hero-content p {
+  font-size: 1.8em;
+  margin-bottom: 2.5em;
+}
+
+.lottie-animation {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 35%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-animation {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.btn-get-started {
+  font-size: 1em;
+  font-family: 'Arial Narrow Bold', sans-serif;
+  padding: 15px 30px;
+  background-color: #fcd15a; /* Direct color for better contrast */
+  color: #121212;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Direct shadow for better control */
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 4em;
+  text-decoration: none; /* Remove underline from text */
+  display: inline-block; /* Align properly with margin auto */
+  margin: auto;
+}
+
+/* Modify button color on hover and remove text underline */
+.btn-get-started:hover {
+  background-color: #e6b800; /* Darker yellow for contrast */
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-decoration: none; /* Remove text underline on hover */
+}
+
+.btn-get-started:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.benefits-section {
+  padding: 2rem 1rem;
+  background-color: #000; /* Définir la couleur de fond en noir */
+  color: white; /* Texte en blanc pour contraste */
+  margin: 0 auto; /* Centrer la section et éviter un débordement */
+  max-width: 100%; /* S'assurer que la section ne dépasse pas la largeur de la page */
+  box-sizing: border-box; /* Inclure le padding dans la largeur définie */
+}
+
+/* Assurez-vous que les éléments à l'intérieur de .benefits-section ne débordent pas */
+.benefits-section * {
+  box-sizing: border-box;
+}
+
+/* Media query pour une adaptation mobile */
+@media (max-width: 768px) {
+  .benefits-section {
+    padding: 1rem; /* Réduction du padding sur les petits écrans */
+  }
+}

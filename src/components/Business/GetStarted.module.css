@@ -1,0 +1,38 @@
+.getStarted {
+    padding: 20px;
+    margin: 30px 0;
+    background-color: #f0f0f0; /* Light gray background for contrast */
+    border-radius: 10px; /* Consistent rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Centering the content */
+}
+
+.getStarted h2 {
+    color: #000000; /* Vibrant blue to catch the eye */
+    margin-bottom: 15px; /* Space below the header */
+}
+
+.getStarted p {
+    color: #666; /* Lighter grey for readable body text */
+    margin-bottom: 20px; /* Space above the button */
+    font-size: 1.1rem; /* Slightly larger font for importance */
+}
+
+.ctaButton {
+    font-size: 1rem;
+    padding: 12px 24px;
+    background-color: #ffd700; /* Bright yellow to stand out */
+    color: #1d1d1d; /* Almost black for contrast */
+    border: none;
+    border-radius: 5px; /* Soft rounded corners for the button */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none; /* No underline for the link */
+    display: inline-block; /* Necessary for alignment and spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds depth on hover */
+}
+
+.ctaButton:hover {
+    background-color: #cca700; /* A darker yellow for hover effect */
+    transform: translateY(-2px); /* Slight lift when hovered */
+}

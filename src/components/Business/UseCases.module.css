@@ -1,0 +1,74 @@
+.useCases {
+    padding: 30px;
+    margin: 40px 0;
+    background-color: #ffffff; /* Background color set to white */
+    border-radius: 10px; /* Using rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: left; /* Keep left alignment for readability */
+}
+
+.heading {
+    color: #333; /* Dark grey for high contrast */
+    margin-bottom: 25px; /* Extra space below the title */
+    font-size: 2rem; /* Larger font size for the title */
+    position: relative; /* For the underline effect */
+}
+
+.heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 30%;
+    height: 5px;
+    background-color: #ffd700; /* Bright yellow underline */
+}
+
+.list {
+    list-style: none; /* No list style for a clean appearance */
+    padding: 0;
+    margin-top: 20px; /* Space at the top of the list */
+}
+
+.list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px; /* More space between items */
+    padding: 15px; /* More padding for better separation */
+    background-color: #ffffff; /* White background for individual items */
+    border: 1px solid #eeeeee; /* Subtle border to define items */
+    border-radius: 10px; /* More rounded corners */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transitions for hover effects */
+}
+
+.list li:hover {
+    transform: translateY(-3px); /* Slight move up on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.18); /* Deeper shadow for hover effect */
+}
+
+.icon {
+    width: 50px; /* Slightly larger icon size */
+    height: 50px; /* Slightly larger icon size */
+    margin-right: 20px; /* More space between the icon and text */
+}
+
+strong {
+    color: #333; /* Dark color for high contrast */
+    font-size: 1.2rem; /* Slight increase in font size */
+    font-weight: 600; /* Heavier font weight for emphasis */
+}
+
+@media (max-width: 768px) {
+    .useCases {
+        padding: 20px; /* Slightly less padding */
+    }
+
+    .list li {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .icon {
+        margin-bottom: 10px; /* Space between icon and text when stacked */
+    }
+}

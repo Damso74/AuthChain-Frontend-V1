@@ -1,0 +1,77 @@
+.supportAccess {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.supportTitle {
+    color: #333;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative; /* Required for positioning the pseudo-element */
+    display: inline-block; /* Ensures the underline only takes up the width of the text */
+  }
+  
+  .supportTitle::after {
+    content: '';
+    display: block;
+    width: 100%; /* Full width of the title */
+    height: 3px; /* Thickness of the underline */
+    background-color: #ffd700; /* Bright yellow color */
+    position: absolute;
+    bottom: -10px; /* Distance from the bottom of the title */
+    left: 0;
+  }
+
+.supportText {
+    color: #666;
+    font-size: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 20px;
+}
+
+.supportLink {
+    background-color: #ffd700;
+    color: #333;
+    padding: 12px 24px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.supportLink:hover {
+    background-color: #cca700;
+}
+
+.animationContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+@media (max-width: 768px) {
+    .supportAccess {
+        padding: 15px;
+    }
+    .supportTitle, .supportText {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    .supportLink {
+        padding: 10px 20px;
+    }
+}

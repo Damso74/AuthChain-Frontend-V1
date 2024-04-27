@@ -1,0 +1,43 @@
+.introduction {
+    padding: 20px;
+    margin: 30px 0;
+    background-color: #f0f0f0; /* Soft gray background */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content for better alignment */
+}
+
+.title {
+    color: #000000; /* Black color for contrast */
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative; /* Required for positioning the pseudo-element */
+    font-size: 1.8rem; /* Larger font size for importance */
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Position under the title */
+    left: 50%; /* Center the line */
+    transform: translateX(-50%); /* Ensure it's centered regardless of text length */
+    width: 50%; /* Line width relative to the element's width */
+    height: 3px; /* Line thickness */
+    background-color: #ffd700; /* Bright yellow for visibility and brand color */
+    border-radius: 1px; /* Smooth corners */
+}
+
+.description {
+    text-align: center;
+    color: #333; /* Darker grey for readability */
+    font-size: 1.1rem; /* Adequate font size for description */
+    margin-bottom: 20px; /* Spacing after the paragraph */
+}
+
+.animation {
+    width: 100%;
+    height: 300px; /* Fixed height to maintain aspect ratio of the animation */
+    margin-top: 20px; /* Space above the animation */
+}

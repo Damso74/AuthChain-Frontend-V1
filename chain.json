@@ -1,0 +1,10 @@
+{
+  "default": "bellecour",
+  "chains": {
+    "mainnet": {},
+    "bellecour": {
+      "id": "134",
+      "host": "https://bellecour.iex.ec"
+    }
+  }
+}

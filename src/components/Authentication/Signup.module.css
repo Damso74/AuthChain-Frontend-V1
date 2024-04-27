@@ -1,0 +1,120 @@
+/*src/components/Authentication/signup.module.css*/
+
+.authformcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f4f4f4; /* Light grey background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px; /* Maximum width of the form */
+  margin: auto;
+}
+
+/* Typography and spacing for the heading */
+.authformcontainer h2 {
+  color: #333; /* Dark grey color for text */
+  margin-bottom: 20px; /* Space below the header */
+  position: relative; /* Needed for the pseudo-element */
+}
+
+.authformcontainer h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 3px;
+  background-color: #ffd700; /* Bright yellow for the underline */
+  border-radius: 1px;
+}
+
+/* Form styling */
+.authformcontainer form {
+  width: 100%;
+}
+
+/* Form fields styling */
+.formgroup {
+  margin-bottom: 15px; /* Space between form groups */
+}
+
+/* Label styling with tooltip icon */
+.formgroup label {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Tooltip icon size adjustment */
+.formgroup .MuiSvgIcon-root {
+  margin-left: 5px;
+  font-size: 1em; /* Smaller icon */
+}
+
+/* Text field styling */
+.formgroup .MuiTextField-root {
+  width: 100%; /* Full width */
+}
+
+/* Modify the wallet info section for better visibility */
+.walletinfo {
+  background-color: #e9ecef; /* Slightly darker background for contrast */
+  border-radius: 16px; /* Rounded corners for modern look */
+  padding: 8px 16px; /* Padding for spacing */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px; /* Margin for spacing from the form */
+  font-size: 0.85rem; /* Adjust font size for space */
+}
+
+/* Style for the Ethereum address typography */
+.walletinfo .MuiTypography-root {
+  color: #495057; /* Dark grey for better readability */
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for addresses */
+}
+
+/* Style the disconnect button to be less prominent */
+.walletinfo .MuiButton-root {
+  color: #6c757d; /* Muted color for the disconnect button */
+  background-color: transparent; /* Transparent background */
+  box-shadow: none; /* No shadow for a flat design */
+  font-size: 0.75rem; /* Smaller font size */
+  padding: 4px 8px; /* Smaller padding */
+  border: 1px solid #ced4da; /* Light grey border */
+  margin-left: 12px; /* Margin to separate from address */
+}
+
+.walletinfo .MuiButton-root:hover {
+  background-color: #dee2e6; /* Light grey background on hover for subtle effect */
+}
+
+/* Adjust the main button styles to be consistent with the form design */
+.authformcontainer .MuiButton-root {
+  background-color: #ffd700; /* Primary color for the sign-up button */
+  color: black; 
+  margin-top: 24px; /* Margin top for spacing */
+}
+
+/* Error message more aesthetically pleasing */
+.errormessage {
+  background-color: #f8d7da; /* Soft red background */
+  color: #721c24; /* Darker text for error messages */
+  border-color: #f5c6cb; /* Soft border color */
+  border-radius: 0.375rem; /* Slight rounding of corners */
+  padding: 0.75rem 1.25rem; /* Comfortable padding */
+  margin-top: 1rem; /* Space from the last element */
+  text-align: left; /* Align text to the left for readability */
+}
+
+/* Enhancing the overall form container aesthetics */
+.authformcontainer {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Deeper shadow for prominence */
+  border: none; /* Removing border */
+}
