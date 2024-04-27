@@ -62,8 +62,8 @@ const DataVisualization: React.FC = () => {
             <div className={styles.pieChartContainer}>
                 <ResponsiveContainer width="100%" height={300}>
                     <PieChart>
-                        <Pie data={tokenData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80} fill="#8884d8" label={(entry) => entry.name}>
-                            {tokenData.map((entry, index) => (
+                        <Pie data={tokenData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80} fill="#8884d8" label={({ name }) => name}>
+                            {tokenData.map((_, index) => (
                                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                             ))}
                         </Pie>

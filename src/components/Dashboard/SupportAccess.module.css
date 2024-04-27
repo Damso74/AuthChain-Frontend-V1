@@ -13,20 +13,20 @@
     color: #333;
     font-size: 2rem;
     font-weight: bold;
-    position: relative; /* Required for positioning the pseudo-element */
-    display: inline-block; /* Ensures the underline only takes up the width of the text */
-  }
-  
-  .supportTitle::after {
+    position: relative; 
+    display: inline-block;
+}
+
+.supportTitle::after {
     content: '';
     display: block;
-    width: 100%; /* Full width of the title */
-    height: 3px; /* Thickness of the underline */
-    background-color: #ffd700; /* Bright yellow color */
+    width: 100%;
+    height: 3px;
+    background-color: #ffd700;
     position: absolute;
-    bottom: -10px; /* Distance from the bottom of the title */
+    bottom: -10px;
     left: 0;
-  }
+}
 
 .supportText {
     color: #666;
@@ -55,12 +55,11 @@
 
 .animationContainer {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    top: 50%; /* Center vertically */
+    left: 40px; /* Adjust left as needed */
+    transform: translateY(-50%) scale(1.5); /* Adjust scale to enlarge */
+    z-index: 1; /* Below the text and button */
     overflow: hidden;
-    display: flex;
-    justify-content: left;
-    align-items: left;
 }
 
 @media (max-width: 768px) {
@@ -73,5 +72,12 @@
     }
     .supportLink {
         padding: 10px 20px;
+    }
+    .animationContainer {
+        position: static;
+        transform: none;
+        width: auto;
+        height: auto;
+        margin: 0 auto 20px; /* Add some space below the animation on mobile */
     }
 }
