@@ -82,8 +82,6 @@ A working prototype of the AuthChain dApp is available for review. The complete 
 
 We've provided detailed documentation to help you set up, deploy, and use AuthChain. It covers every aspect of the dApp, from smart contracts to the frontend setup. The documentation for the API and SDK is currently under construction.
 
-**Documentation Link**: [AuthChain Documentation](/docs)
-
 ### Demo Video
 
 Watch a brief demo video showcasing how AuthChain works and its various functionalities.
