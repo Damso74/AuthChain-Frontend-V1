@@ -88,5 +88,5 @@ We've provided detailed documentation to help you set up, deploy, and use AuthCh
 
 Watch a brief demo video showcasing how AuthChain works and its various functionalities.
 
-**Demo Video Link**: [AuthChain Demo]([/demo](https://youtu.be/AxPpUXdIDy0))
+**Demo Video Link**: [AuthChain Demo](https://youtu.be/AxPpUXdIDy0)
 
