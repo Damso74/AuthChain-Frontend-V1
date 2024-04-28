@@ -17,12 +17,12 @@ To set up the development environment, follow these steps:
 
 1. Clone the repository:
 ```sh
-git clone https://github.com/your-github-username/AuthChain-Frontend.git
+git clone https://github.com/Damso74/AuthChain-Frontend-V1.git
 ```
 
 2. Navigate to the project directory:
 ```sh
-cd AuthChain-Frontend
+cd AuthChain-Frontend-V1
 ```
 
 3. Install the necessary dependencies using npm:
