@@ -88,3 +88,4 @@ Watch a brief demo video showcasing how AuthChain works and its various function
 
 **Demo Video Link**: [AuthChain Demo](https://youtu.be/AxPpUXdIDy0)
 
+[Contact me on LinkedIn here](https://www.linkedin.com/in/damien-credoz/)
