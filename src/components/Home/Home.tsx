@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 import lottie, { AnimationItem } from 'lottie-web'; // Import the type AnimationItem
 import BenefitsSection from './BenefitsSection';
 import About from '../About/About';
-
+import AnimationHome from '../../animation/AnimationHome'; // Import the AnimationHome component
 import './Home.css'; 
-
 import { initHeroAnimation } from './heroAnimation'; 
 
 const Home: React.FC = () => {
@@ -24,7 +23,7 @@ const Home: React.FC = () => {
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: 'public/animation/animation-home.json' // Chemin correct vers le fichier d'animation
+        path: 'src/animation/animation-home.json' // Chemin correct vers le fichier d'animation
       }) as AnimationItem; // Use type assertion here if needed
     }
 
@@ -48,6 +47,7 @@ const Home: React.FC = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
   return (
     <div className="home">
       {/* Hero Section with Lottie Animation */}
@@ -58,12 +58,14 @@ const Home: React.FC = () => {
           <p>Your bridge to decentralized authentication.</p>
           <Link to="/signup" className="btn-get-started">Get Started</Link>
         </div>
-        <div ref={animationContainer} className="lottie-animation" /> {/* Container for the lottie animation */}
+        <div ref={animationContainer} className="lottie-animation">
+          <AnimationHome /> {/* Container for the lottie animation */}
+        </div>
       </section>
 
       {/* Benefits Section */}
       <BenefitsSection />
-      <About></About>
+      <About />
 
       {/* How It Works Section */}
       <section className="how-it-works-section">
@@ -79,7 +81,6 @@ const Home: React.FC = () => {
       <section className="faq-section">
         {/* This section will address frequently asked questions about AuthChain */}
       </section>
-
     </div>
   );
 };
