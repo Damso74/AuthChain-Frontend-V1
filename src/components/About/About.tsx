@@ -1,46 +1,11 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import lottie from 'lottie-web';
 import styles from './About.module.css'; // Assuming the CSS module is properly configured
+import AnimationBlockchainGraphic from '../../animation/AnimationBlockchainGraphic';
+import AnimationSecureLockGraphic from '../../animation/AnimationSecureLockGraphic';
+import AnimationTeamworkGraphic from '../../animation/AnimationTeamworkGraphic';
 
 const About: React.FC = () => {
-    const blockchainAnimationRef = useRef<HTMLDivElement>(null);
-    const secureAuthAnimationRef = useRef<HTMLDivElement>(null);
-    const teamAnimationRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        const blockchainAnim = lottie.loadAnimation({
-            container: blockchainAnimationRef.current!,
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: 'src/animation/blockchain-graphic.json', // Path to specific animation JSON
-        });
-
-        const secureAuthAnim = lottie.loadAnimation({
-            container: secureAuthAnimationRef.current!,
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: 'src/animation/secure-lock-graphic.json', // Path to specific animation JSON
-        });
-
-        const teamAnim = lottie.loadAnimation({
-            container: teamAnimationRef.current!,
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: 'src/animation/teamwork-graphic.json', // Path to specific animation JSON
-        });
-
-        // Cleanup animations on component unmount
-        return () => {
-            blockchainAnim.destroy();
-            secureAuthAnim.destroy();
-            teamAnim.destroy();
-        };
-    }, []);
-
     return (
         <div className={styles.aboutContainer}>
             <section className={`${styles.introSection} ${styles.section}`}>
@@ -48,7 +13,7 @@ const About: React.FC = () => {
                 <p className={styles.paragraph}>
                     AuthChain revolutionizes online security by integrating blockchain technology to create an immutable and secure authentication system. Our platform ensures that your digital interactions remain private and secure.
                 </p>
-                <div ref={blockchainAnimationRef} className={styles.animationContainer}></div>
+                <AnimationBlockchainGraphic />
             </section>
 
             <section className={`${styles.securitySection} ${styles.section}`}>
@@ -56,7 +21,7 @@ const About: React.FC = () => {
                 <p className={styles.paragraph}>
                     Experience unparalleled security levels. Our platform ensures complete immutability and resistance to cyber threats, powered by blockchain.
                 </p>
-                <div ref={secureAuthAnimationRef} className={styles.animationContainer}></div>
+                <AnimationSecureLockGraphic />
             </section>
 
             <section className={`${styles.missionSection} ${styles.section}`}>
@@ -72,7 +37,7 @@ const About: React.FC = () => {
                 <p className={styles.paragraph}>
                     We are driven by a passion to disrupt the traditional security paradigms and are backed by a team of expert developers and security specialists.
                 </p>
-                <div ref={teamAnimationRef} className={styles.animationContainer}></div>
+                <AnimationTeamworkGraphic />
             </section>
 
             <section className={`${styles.ctaSection} ${styles.section}`}>
