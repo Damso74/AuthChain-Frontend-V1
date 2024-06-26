@@ -36,6 +36,8 @@ const Contact: React.FC = () => {
   return (
     <div className="contact-container">
       <h2>Contact Us</h2>
+      <p>This form is not connected, so your messages will not be received. Please contact us through LinkedIn:</p>
+      <p><a href="https://www.linkedin.com/in/damien-credoz/" target="_blank" rel="noopener noreferrer">Damien Credoz on LinkedIn</a></p>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name:</label>
@@ -60,7 +62,7 @@ const Contact: React.FC = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="message">Message :</label>
+          <label htmlFor="message">Message:</label>
           <textarea
             id="message"
             name="message"
