@@ -1,6 +1,7 @@
 import styles from './SupportAccess.module.css';
 import Lottie from 'react-lottie-player';
 import animationData from '../../animation/animation-support.json';  // Ensure the path is correct
+import { Link } from 'react-router-dom';  // Import Link from react-router-dom
 
 const SupportAccess = () => {
   return (
@@ -9,9 +10,9 @@ const SupportAccess = () => {
       <p className={styles.supportText}>
         Our dedicated support team is here to assist you with any inquiries or issues.
       </p>
-      <a href="/contact" className={styles.supportLink}>
+      <Link to="/contact" className={styles.supportLink}>
         Contact Support
-      </a>
+      </Link>
       <div className={styles.animationContainer}>
         <Lottie
           loop
