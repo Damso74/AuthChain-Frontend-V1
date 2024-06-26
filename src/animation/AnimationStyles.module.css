@@ -1,0 +1,11 @@
+.animationContainer {
+    width: 100%;
+    max-width: 400px; /* Adjust the size as needed */
+    margin: 0 auto;
+  }
+  
+  .animationContainer svg {
+    width: 100%;
+    height: auto;
+  }
+  
