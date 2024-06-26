@@ -1,29 +1,18 @@
 /* src/components/Common/Footer.css */
-:root {
-  --footer-background-color: #000000; /* Dark theme background */
-  --footer-text-color: #CCCCCC; /* Light gray text for better readability */
-  --footer-link-color: #FF9800; /* Primary color for links */
-  --footer-link-hover-color: #E68900; /* Darkened primary color on hover */
-  --footer-max-width: 1200px; /* Maximum width of the footer container */
-  --footer-padding: 20px 0; /* Vertical padding for the footer */
-  --footer-font-size: 14px; /* Base font size for footer text */
-  --footer-line-height: 1.5; /* Line height for footer text */
-  --transition-speed: 0.3s; /* Speed of transition effects */
-}
 
 .footer {
-  background-color: var(--footer-background-color);
-  color: var(--footer-text-color);
-  padding: var(--footer-padding);
-  font-size: var(--footer-font-size);
-  line-height: var(--footer-line-height);
+  background-color: #000000; /* Dark theme background */
+  color: #CCCCCC; /* Light gray text for better readability */
+  padding: 20px 0; /* Vertical padding for the footer */
+  font-size: 14px; /* Base font size for footer text */
+  line-height: 1.5; /* Line height for footer text */
 }
 
 .footer .container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: var(--footer-max-width);
+  max-width: 1200px; /* Maximum width of the footer container */
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -35,26 +24,26 @@
 
 .footer-links a,
 .footer-open-source a {
-  color: var(--footer-link-color);
+  color: #FF9800; /* Primary color for links */
   text-decoration: none;
   margin-right: 15px;
-  transition: color var(--transition-speed) ease;
+  transition: color 0.3s ease; /* Speed of transition effects */
 }
 
 .footer-links a:hover,
 .footer-open-source a:hover {
-  color: var(--footer-link-hover-color); /* Enhance visual interaction */
+  color: #E68900; /* Darkened primary color on hover */
 }
 
 .footer-open-source p {
-  color: var(--footer-text-color);
+  color: #CCCCCC; /* Light gray text for better readability */
   margin-right: 0;
 }
 
 .copy-right {
   text-align: center;
   margin-top: 20px;
-  color: var(--footer-text-color);
+  color: #CCCCCC; /* Light gray text for better readability */
 }
 
 /* Responsiveness */
