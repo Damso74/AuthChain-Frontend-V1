@@ -74,7 +74,7 @@ const SignupForm: React.FC = () => {
             const sendResult = await web3mail.sendEmail({
                 protectedData: protectionResult.address,
                 emailSubject: "Verify Your Email Address",
-                emailContent: `<p>Please verify your email by clicking on this link: <a href="https://yourdomain.com/verify?data=${protectionResult.address}">Verify Email</a></p>`,
+                emailContent: `<p>Please verify your email by clicking on this link: <a href="https://www.linkedin.com/in/damien-credoz/">Verify Email</a></p>`,//You can replace the link by : "https://yourdomain.com/verify?data=${protectionResult.address}"
                 contentType: "text/html",
                 senderName: "AuthChain",
             });
