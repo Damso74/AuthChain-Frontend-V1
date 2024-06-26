@@ -1,6 +1,7 @@
 import React from 'react';
 import lottie from 'lottie-web';
 import { useEffect, useRef } from 'react';
+import styles from './AnimationStyles.module.css'; // Assuming you have a CSS module for styles
 import animationData from './secure-lock-graphic.json';
 
 const AnimationSecureLockGraphic: React.FC = () => {
@@ -18,7 +19,7 @@ const AnimationSecureLockGraphic: React.FC = () => {
     return () => anim.destroy(); // Clean up on unmount
   }, []);
 
-  return <div ref={animationContainerRef} style={{ width: 400, height: 400 }}></div>;
+  return <div ref={animationContainerRef} className={styles.animationContainer}></div>;
 };
 
 export default AnimationSecureLockGraphic;
