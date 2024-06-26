@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './About.module.css'; // Assuming the CSS module is properly configured
 import lottie from 'lottie-web';
+import styles from './About.module.css'; // Assuming the CSS module is properly configured
 
 const About: React.FC = () => {
     const blockchainAnimationRef = useRef<HTMLDivElement>(null);
@@ -14,7 +14,7 @@ const About: React.FC = () => {
             renderer: 'svg',
             loop: true,
             autoplay: true,
-            path: 'src/animation/blockchain-graphic.json' // Path to specific animation JSON
+            path: 'src/animation/blockchain-graphic.json', // Path to specific animation JSON
         });
 
         const secureAuthAnim = lottie.loadAnimation({
@@ -22,7 +22,7 @@ const About: React.FC = () => {
             renderer: 'svg',
             loop: true,
             autoplay: true,
-            path: 'src/animation/secure-lock-graphic.json' // Path to specific animation JSON
+            path: 'src/animation/secure-lock-graphic.json', // Path to specific animation JSON
         });
 
         const teamAnim = lottie.loadAnimation({
@@ -30,7 +30,7 @@ const About: React.FC = () => {
             renderer: 'svg',
             loop: true,
             autoplay: true,
-            path: 'src/animation/teamwork-graphic.json' // Path to specific animation JSON
+            path: 'src/animation/teamwork-graphic.json', // Path to specific animation JSON
         });
 
         // Cleanup animations on component unmount
